@@ -1,0 +1,117 @@
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Beeter Example</title>
+		
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+
+	</head>
+<body>
+	<div class="container theme-showcase" role="main">
+		<div class="jumbotron">
+			<h1>Beeter Example</h1>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="stings-container">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Sting Creation</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Subject</span> <input
+									type="text" class="form-control" id="create-subject"><br>
+							</div>
+
+							<h1></h1>
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Content</span>
+								<textarea class="form-control" rows="4" cols="50"
+									id="create-content" form="create-sting-form"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<button type="button" class="btn btn-info" id="button-create-sting">Create</button>
+				<button type="button" class="btn btn-success" id="button_get_Stings">Get
+					Stings</button>
+
+				<h1></h1>
+
+				<div class="alert alert-danger" id="CreateStingError"
+					style="display: none;">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<h4 class="alert-heading">Error al crear el Sting!</h4>
+					Please try again...
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Sting Colection</h3>
+					</div>
+					<div class="panel-body">
+						<span id="stings-collection" style="display: none;"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="sting-detail" style="display: none;">
+			<h2 id="subject"></h2>
+			<p id="content"></p>
+			<p id="author" style="font-size: small;"></p>
+			<p id="modified" style="font-size: small;"></p>
+			<a id="back-to-stings" />Stings<a>
+				<button id="edit-sting" />Edit
+				</button>
+				<button id="delete-sting" />Delete
+				</button>
+
+				<form id="edit-sting-form" hidden>
+					<label>Subject</label><br> <input type="text"
+						style="width: 400px;" size="50" id="edit-subject"><br>
+
+					<label>Content</label><br>
+					<textarea rows="4" style="width: 400px;" cols="50"
+						id="edit-content" form="create-sting-form"></textarea>
+					<br>
+					<button id="edit-ok" />
+					Ok
+					</button>
+					<button id="edit-cancel" />
+					Cancel
+					</button>
+				</form>
+
+				<div class="alert alert-block alert-success" id="CreateStingSucces"
+					style="display: none;">
+					<a class="close" data-dismiss="alert" href="#">X</a>
+					<h4 class="alert-heading">Success!</h4>
+					Congratulations, you have successfully submitted.
+				</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+			<!-- jQuery 1.11.0 development -->
+			<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+			<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
+			<!-- link-headers -->
+			<script src="./js/uritemplate.js"></script>
+			<script src="./js/linkheaders.js"></script>
+			<!-- jQuery Base64 plugin -->
+			<script src="./js/jquery.base64.js"></script>
+			<!-- Beeter js -->
+			<script src="./js/api.js"></script>
+			<script src="./js/main.js"></script></body>
+</html>
